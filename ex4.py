@@ -11,12 +11,12 @@ do_not = "don't"
 y = 'Those who know %s and those who %s.' % (binary, do_not)
 
 #printing x and y
-print x
-print y
+print(x)
+print(y)
 
 #pringint x and y variables within format character
-print "I said: %r." % x
-print "I also said: '%s'." %y
+print("I said: %r." % x)
+print("I also said: '%s'." %y)
 
 #set hilarious varible to false
 hilarious = False
@@ -25,11 +25,11 @@ hilarious = False
 joke_eval = "Isn't that joke funny? %r"
  
 #print joke_eval with hlarious as the format character
-print joke_eval % hilarious
+print(joke_eval % hilarious)
  
 #set w and e variables to string
 w = 'This is the left side of...'
 e = 'a string with a right side.'
 
 #print variables w and e 
-print w + e
+print(w + e)

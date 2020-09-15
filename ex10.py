@@ -1,7 +1,6 @@
-#raw_input with string will set the user feedback to equal variable age
-age = raw_input("How old are you? ") 
-height = raw_input("How tall are you? ")
-weight = raw_input("How much do you weigh? ")
+#input() with string will set the user feedback to equal variable age
+age = input("How old are you? ") 
+height = input("How tall are you? ")
+weight = input("How much do you weigh? ")
 
-print "So, you are %r old, %r tall, and %r heavy." % (
-    age, height, weight)
+print("So, you are %r old, %r tall, and %r lbs." % (age, height, weight))

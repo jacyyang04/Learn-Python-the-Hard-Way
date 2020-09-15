@@ -5,9 +5,9 @@ script, filename = argv
 #in terminal, it is typed in as
 #python ex14.py (and then the name of the file)
 
-print "We're going to erase %r." % filename
-print "If you don't want that, hit CTRL-C (^C)."
-print "If you DO want that, hit return."
+print("We're going to erase %r." % filename)
+print("If you don't want that, hit CTRL-C (^C).")
+print("If you DO want that, hit return.")
 
 #CTRL-C creates this:
 #Traceback (most recent call last):
@@ -15,25 +15,25 @@ print "If you DO want that, hit return."
 #    raw_input("?")
 #KeyboardInterrupt
 
-#raw_input("?")
+input("Do you want to continue?")
 
-print "Opening the file..."
+print("Opening the file...")
 
 target = open(filename, "w")
 
 #truncate deletes the content of the file
-print "Truncating the file. Goodbye!"
+print("Truncating the file. Goodbye!")
 target.truncate()
 
-print "Now I'm going to ask you for three lines.."
+print("Now I'm going to ask you for three lines..")
 
 #sets up new variables for user input
-line1 = raw_input("Line1: ")
-line2 = raw_input("Line2: ")
-line3 = raw_input("Line3: ")
+line1 = input("Line1: ")
+line2 = input("Line2: ")
+line3 = input("Line3: ")
 
 
-print "Now I will add these lines to the file."
+print("Now I will add these lines to the file.")
 
 #adds the line to the file
 #target.write(line1)
@@ -48,5 +48,5 @@ print "Now I will add these lines to the file."
 #target.writelines([line1, line2, line3])
 target.write("%s\n%s\n%s\n" % (line1, line2, line3))
 
-print "And finally, we close it."
+print("And finally, we close it.")
 target.close()

@@ -1,6 +1,8 @@
-print "Let's practice everythingggggggggg"
+#putting it all together
 
-print 'You\'d need to know \'bout escapes with \\ that do \n newlines and \t tabs.'
+print("Let's practice everythingggggggggg")
+
+print('You\'d need to know \'bout escapes with \\ that do \n newlines and \t tabs.')
 
 poem = """
 \tThe lovely world
@@ -11,12 +13,12 @@ and requires explaination
 \n\twhere there is none.
 """
 
-print "---------------"
-print poem
-print "---------------"
+print("---------------")
+print(poem)
+print("---------------")
 
 five = 10-2+3-6
-print "This should be five: %s" %five
+print("This should be five: %s" %five)
 
 def secret_formula(started):
     jelly_beans = started * 500
@@ -28,11 +30,11 @@ startpoint = 10000
 #assign variables to the return values from secret_formula
 beans, jars, crates = secret_formula(startpoint)
  
-print "With a starting point of: %d" %startpoint
-print "We'd have %d beans, %d jars and %d crates." % (beans, jars, crates)
+print("With a starting point of: %d" %startpoint)
+print("We'd have %d beans, %d jars and %d crates." % (beans, jars, crates))
  
 startpoint = startpoint/10
  
-print "We can also do it this way:"
+print("We can also do it this way:")
 #returns the value into the statement
-print "We'd have %d beans, %d jars and %d crates." % secret_formula(startpoint)
+print("We'd have %d beans, %d jars and %d crates." % secret_formula(startpoint))

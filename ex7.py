@@ -5,11 +5,11 @@ days = "Mon Tue Wed Thur Fri Sat Sun"
 #sets variable to the months with a new line for each month
 months = "\nJan\nFeb\nMar\nApr\nMay\nJun\nJul\nAug\nSept\nOct\nNov\nDec"
 
-print "Here are the days: ", days
-print "Here are the months: ", months
+print("Here are the days: ", days)
+print("Here are the months: ", months)
 
 #prints the paragraph
-print """
+paragraph = """
 There's something going on here.
 With the three double quotes.
 I think it will print this all out?
@@ -19,3 +19,5 @@ terminal will print a break and
 then this paragraph. Although,
 it's not tabbed.
 """
+
+print(paragraph)

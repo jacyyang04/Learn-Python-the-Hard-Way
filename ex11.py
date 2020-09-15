@@ -8,22 +8,22 @@ script, first, second, third, fourth = argv
 
 #can set variables up as raw_input() but would need to make sure
 #in terminal, run it as:
-#python ex11.py first second third fourth
-#first = raw_input("What is your favorite color? ", )
-#second = raw_input("What is your favorite ice cream? ", )
-#third = raw_input("What is your favorite drink? ", )
-#fourth = raw_input("Who is your hero? ", )
+#python3 ex11.py first second third fourth
+first = input("What is your favorite color? ", )
+second = input("What is your favorite ice cream? ", )
+third = input("What is your favorite drink? ", )
+fourth = input("Who is your hero? ", )
 
 #I can also run raw_input at the end.
-print "The script is called:", script
-raw_input("First variable is: ")
-raw_input("Second variable is: ")
-raw_input("Third variable is: ")
-raw_input("Fourth variable is: ")
+print("The script is called:", script)
+input("First variable is: ")
+input("Second variable is: ")
+input("Third variable is: ")
+input("Fourth variable is: ")
 
 #Output:
 
-#in terminal, type [python ex11.py ___ ___ ___ ___]
+#in terminal, type [python3 ex11.py ___ ___ ___ ___]
 #I would pick out the given arguments
 #python ex11.py hello Jacy Yang
 
