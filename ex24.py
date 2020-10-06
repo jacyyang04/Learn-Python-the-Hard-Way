@@ -1,5 +1,7 @@
 from sys import exit
 
+#defining function for gold_room()
+#prompts user input to execute if statements
 def gold_room():
     print("This room is full of gold. Mow much do you take?")
     
@@ -16,7 +18,8 @@ def gold_room():
     else:
         dead("You're a greedy person. Tsk tsk tsk.")
 
-
+#defining function for bear_room()
+#prompts user input to execute if statements
 def bear_room():
     print("There is a bear here.")
     print("The bear has a bunch of honey.")
@@ -40,7 +43,8 @@ def bear_room():
         else:
             print("Please try again.")
             
-
+#defining function for cthulhu_room()
+#prompts user input to execute if statements
 def cthulhu_room():
     print("Here you see the great evil Cthulhu.")
     print("He, it, whatever stares at you and it starts to get weird.")
@@ -55,12 +59,12 @@ def cthulhu_room():
     else:
         cthulhu_room()
 
-
+#prints given argument and ends the game
 def dead(why):
     print(why, "Good job!")
     exit(0)
 
-
+#defining start() function, prompts user to choose left or right room and dead function
 def start():
     print("You are in a dark room.")
     print("There is a door to your right and a door to your left.")
