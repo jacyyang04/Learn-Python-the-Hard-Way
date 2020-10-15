@@ -5,7 +5,7 @@ from sys import exit
 def gold_room():
     print("This room is full of gold. Mow much do you take?")
     
-    next = raw_input("> ")
+    next = input("> ")
     if "0" in next or "1" in next:
         how_much = int(next)    
     else:
