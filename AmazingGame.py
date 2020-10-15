@@ -17,8 +17,8 @@ def lose(reason):
 #    sleep(2)
 
 #prompts user name before starting the game
-#name = input('Preparing your boarding ticket, name please? ').capitalize()
-#sleep(1.5)
+name = input('Preparing your boarding ticket, name please? ').capitalize()
+sleep(1.5)
 
 #user starts in the U.S and must answer quiz correctly to go to the next desintation
 def welcome_us():
@@ -362,11 +362,12 @@ def cranequestions():
         Q5cranes = CQ5()
         total_cranes = total_cranes + Q5cranes
         
-        
-        if total_cranes == 1000:
-            print(f"Congrats {name.upper}! You just finished collecting 1000 cranes!")
-        else:
-            lose('You almost made it.')
+    #prints according to total crane
+    if total_cranes == 1000:
+        print(f"Congrats {name.upper()}! You just finished collecting 1000 cranes!")
+    else:
+        print(f"You have {total_cranes}.")
+        lose('You almost made it.')
 
 #defines crane question1 and returns 200 cranes if user enters a number equal or higher to 70
 def CQ1():
@@ -374,13 +375,13 @@ def CQ1():
     #stores user input
     number_monuments = int(input('> '))
     
-    if number_monuments <= 70:
+    if number_monuments >= 70:
         print(f"Correct! As mentioned above, there are over 70 monuments. You have obtained 200 cranes.")
         Q1cranes = 200
         return(Q1cranes)
     #for loop will continue until user guesses correctly.
     else:
-        print('Try Again.')
+        print('Reread the information given and try again.\n')
         CQ1()
 
 #defines crane question2 and returns 200 cranes if user inputs true
@@ -418,8 +419,8 @@ def CQ3():
 #defines question4, prints out history of Laos and returns 0 or 200 cranes
 def CQ4():
     print('What country is the most heavily bombed nation in the history?')
-    country = input()
-    if country == 'Laos':
+    country = input('Your guess: ')
+    if country == 'Laos' or country == 'laos':
         print('\nSpot on! Although Laos was the offical neutral country, it became a battle ground')
         print('during the Cold War between the Unites States and the Soviety Union.')
         print('America dropped over 2 million tons of cluster bombs on this small country.')
@@ -437,7 +438,7 @@ def CQ4():
         print('during the Cold War between the Unites States and the Soviety Union.')
         print('America dropped over 2 million tons of cluster bombs on this small country.')
         print('That is more bombs dropped during World War II combined. Today, 30% of the bombs dropped')
-        print('from Americans still remain on Laotian soil as a result of failing to explose upon impact,')
+        print('from Americans still remain on Laotian soil as a result of failing to explode upon impact,')
         print('killing and injuring over 20,000 people with the 80 million bombs left behind.')
         print('President Barack Obama was the first president to visit Laos, pledging $90 million in aid')
         print('to remove and locate unexploded bombs.\n')
@@ -468,41 +469,52 @@ def CQ5():
     
     #starting the questions
     print('\nQ5) What is the name of the peace activist who protested against nuclear arms in front of the')
-    print('\tWhite House in her peace camp until 2016?')
+    print('\tWhite House in her peace camp until 2016?\n')
     
     print('1) Setsuko Thurlow')
-    print('2) ')
+    print('2) Wangari Maathai')
     print('3) Concepcion (Connie or Conchita) Picciotto')
-    print('4) ')
-    guess = input()
+    print('4) Dolores Huerta')
+    guess = input('Your guess: ')
     
-    if guess == "3" or guess == "three"
-        print("Nice! Yes, Picciotto was the one and only person who carried out the longest")
-        print('continous act of political protest in the United States (35 years!)')
+    if guess == "3" or guess == "three":
+        print("\nNice! Yes, Picciotto was the one and only person who carried out the longest")
+        print('continous act of political protest in the United States (35 years!).\n')
         Q5cranes = 200
         return(Q5cranes)
         
-    elif guess == "1" or guess == "one"
+    elif guess == "1" or guess == "one":
         print('\nSetsuko Thurlow is actually a Japanese Canadian peace activist.')
         print('She is a survivor of the atomic bomb in Hiroshima and is known for her work')
         print('in anti-nuclear weapons after the United States dropped a hydrogen bomb in the Marshal Islands,')
         print('10 years after the bombing in Hirshima. The hydrogen bomb is 10x more powerful than the')
         print('bomb dropped in Hiroshma. Setsuko went on to advocate for anti-nuclear weapons and became')
         print('an active member in the ratification of the United Nations treaty on prohibition of nulcear')
-        print("weapons. Let us learn from Setsuko Thurlow in her efforts for a more peaceful world.")
-        
-        print('Try Again.')
-    elif guess == "1" or guess == "one"
-    
-    elif guess == "1" or guess == "one"
-    
+        print("weapons. Let us learn from Setsuko Thurlow in her efforts for a more peaceful world.\n")
+        print('Try again.\n')
+        CQ5()
+    elif guess == "2" or guess == "two":
+        print('\nWangari Maathai is actually a Kenyan social, environmental and political activist and the')
+        print('first African woman to win a Nobel Peace Prize. Maathai founded the Green Belt Movement,')
+        print('an environment NGO organization that planted trees, pushed for enviornmental conservation,')
+        print("and women's rights. The Wanagri Garden in Washington D.C honors her legacy in community")
+        print('engagement and environmental protection.\n')
+        print('Try again. \n')
+        CQ5()
+    elif guess == "4" or guess == "four":
+        print('\nDolores Huerta, an American labor leader and civil rights activist who coined, "Si, se puede".')
+        print('Cofounded with Cesar Chavez, of the Natoinal Farmworkers Association, Huerta helped')
+        print("organize the Delano grape strike in 1965 in California and negotiated in the workers'")
+        print("contract after the strike. Known for her activism in workers', women's, and immirgrant rights,")
+        print('Huerta is a name we should all know.\n')
+        print('Try again.\n')
+        CQ5()
     else:
-        print("Hmmm, it looks like you didn't even try.")
+        print("Hmmm, it looks like you didn't even try.\n")
         Q5cranes = 0
         return(Q5cranes)
 
-#cranequestions()
-CQ5()
+cranequestions()
 
 
 
