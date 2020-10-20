@@ -322,28 +322,15 @@ def Hiroshima():
     
     print('Have you read the book about Sadako Sasaki?\n')
     print('She believe that if she made 1000 paper cranes, it would grant her wish to live.')
-    print("Answer the following questions to collect 1000 paper cranes to add to the Children's Peace Monument.\n")
+    print("Answer these questions to collect 1000 paper cranes to add to the Children's Peace Monument.\n")
     
-    ready()
-
-#function that asks for user readiness and prompts crane-quiz function   
-def ready():
-    user_ready = input('Are you ready? > ')
+    cranequestions()
     
-    if 'y' in user_ready or 'Y' in user_ready:
-        cranequestions()
-    elif 'n' in user_ready or 'N' in user_ready:
-        print('Okay, let me give you more time...')
-        #will give user a 2 second pause before prompting ready function again
-        sleep(2)
-        ready()
-    else:
-        print("Looks like you aren't ready.")
-        lose('')
 
 #while loop that will stop when cranes = 1000
 def cranequestions():
     total_cranes = 0
+    print(total_cranes)
     print('You are starting with "0" total cranes.\n')
     
     while total_cranes < 1000:
@@ -361,12 +348,14 @@ def cranequestions():
         print(f"Almost there. One more question.\n") 
         Q5cranes = CQ5()
         total_cranes = total_cranes + Q5cranes
+        print(f"You now have {total_cranes} cranes.\n")
+        break
         
     #prints according to total crane
     if total_cranes == 1000:
         print(f"Congrats {name.upper()}! You just finished collecting 1000 cranes!")
     else:
-        print(f"You have {total_cranes}.")
+        print(f"You have {total_cranes} cranes.")
         lose('You almost made it.')
 
 #defines crane question1 and returns 200 cranes if user enters a number equal or higher to 70
@@ -374,15 +363,15 @@ def CQ1():
     print('Q1) How many monuments are in the Peace Memorial Park?\n')
     #stores user input
     number_monuments = int(input('> '))
-    
     if number_monuments >= 70:
-        print(f"Correct! As mentioned above, there are over 70 monuments. You have obtained 200 cranes.")
-        Q1cranes = 200
-        return(Q1cranes)
+        print(f"Correct! As mentioned above, there are over 70 monuments. You have obtained 200 cranes!\n")
     #for loop will continue until user guesses correctly.
     else:
         print('Reread the information given and try again.\n')
         CQ1()
+    #returns Q1cranes
+    Q1cranes = 200
+    return Q1cranes
 
 #defines crane question2 and returns 200 cranes if user inputs true
 def CQ2():
@@ -391,21 +380,20 @@ def CQ2():
     answer = input('True or False? > ')
     
     if 'T' in answer or 't' in answer:
-        Q2crane = 200
         print(f"Nice. You just gained 200 cranes.")
-        return(Q2crane)
     else:
         print('Try again.')
         CQ2()
+    #returns Q2cranes    
+    Q2cranes = 200
+    return(Q2cranes)
 
 #defines question3 and returns 200 cranes if user inputs Nagasaki
 def CQ3():
     print('What is the name of the other well known Japanese city the United States dropped bombs on?')
-    city = input('> ')
+    city = input('> ').capitalize()
     if 'Nagasaki' in city:
         print("Sounds like you are well informed aobut the United States atomic warfare.")
-        Q3cranes = 200
-        return(Q3cranes)
     #will reprompt the question if user inputs anything with the letter n
     elif 'N' in city or 'n' in city:
         print("I think your spelling is a bit off. Try again.")
@@ -415,7 +403,11 @@ def CQ3():
         print("Hmm.. That's not quite it. No cranes for you.")
         Q3cranes = 0
         return(Q3cranes)
-
+        
+    #returns Q3cranes
+    Q3cranes = 200
+    return(Q3cranes)
+    
 #defines question4, prints out history of Laos and returns 0 or 200 cranes
 def CQ4():
     print('What country is the most heavily bombed nation in the history?')
@@ -430,8 +422,7 @@ def CQ4():
         print('President Barack Obama was the first president to visit Laos, pledging $90 million in aid')
         print('to remove and locate unexploded bombs.\n')
         print('200 cranes collected.')
-        Q4cranes = 200
-        return(Q4cranes)
+
     else:
         print('\nNot quite. Laos is actually the most bombed country in the world.')
         print('Although Laos was the offical neutral country, it became a battle ground')
@@ -445,8 +436,13 @@ def CQ4():
         
         print('You can read more about it here: ')
         print('https://www.history.com/news/laos-most-bombed-country-vietnam-war\n')
+        #returns 0 cranes if answers is NOT Laos
         Q4cranes = 0
         return(Q4cranes)
+        
+    #returns Q2cranes    
+    Q4cranes = 200
+    return(Q4cranes)
 
 #defines question5 and returns 200 cranes if user answers correctly
 #I would like to add an option to bet cranes but will have to come back for this
@@ -480,8 +476,6 @@ def CQ5():
     if guess == "3" or guess == "three":
         print("\nNice! Yes, Picciotto was the one and only person who carried out the longest")
         print('continous act of political protest in the United States (35 years!).\n')
-        Q5cranes = 200
-        return(Q5cranes)
         
     elif guess == "1" or guess == "one":
         print('\nSetsuko Thurlow is actually a Japanese Canadian peace activist.')
@@ -514,7 +508,10 @@ def CQ5():
         Q5cranes = 0
         return(Q5cranes)
 
-cranequestions()
+    #returns Q2cranes    
+    Q5cranes = 200
+    return(Q5cranes)
 
+cranequestions()
 
 
