@@ -286,6 +286,9 @@ def india_food():
         print('\nInteresting.. but not even close.')
         lose("Sorry, but seems like you've ran out of time.")
 
+#Final trip to Japan is very lengthy--consider moving into another file and turn the codes to
+#reading files.
+
 #prints Japan welcome speech and prompt location for next mini quiz    
 def welcome_japan():
     print('Welcome to Japan!\n')
@@ -327,10 +330,9 @@ def Hiroshima():
     cranequestions()
     
 
-#while loop that will stop when cranes = 1000
+#calls each question in while loop and adds return value to total_cranes variable
 def cranequestions():
     total_cranes = 0
-    print(total_cranes)
     print('You are starting with "0" total cranes.\n')
     
     while total_cranes < 1000:
@@ -512,6 +514,94 @@ def CQ5():
     Q5cranes = 200
     return(Q5cranes)
 
-cranequestions()
+#japanses food intro and prompts final questionaires
+def japan_food():
+    print("Made up of 3,000 islands, 2/3 of Japan's land is too mounatinous develop, thus devoting")
+    print('half of its farmable land to growing rice and making up 8% of all fish caught in the world.\n')
+    
+    print('Japanese cuisine was awarded the statuse of intangible cultural heritage')
+    print('by UNESCO, (United Nations Educational, Scientific and Cultural Organizations).')
+    print('Like many other cuisines, Japanese cuisine has been influenced by other food')
+    print('customs of other nations. Answer each dish question to gain 1000 food stars to win the race.\n')
+    
+    #calls j-foodquestions() function
+    j-foodquestions()
+    
+#calls each question in while loop and adds return value to total_stars variable
+def j-foodquestions():
+    total_stars = 0
+    print('You are starting with "0" total food stars.\n')
+    
+    while total_cranes < 1000:
+        Q1stars = FoodStarQ1()
+        total_stars = total_stars + Q1stars
+        print(f"You currently have {total_stars} stars.\n")
+        Q2stars = FoodStarQ2()
+        total_stars = total_stars + Q2stars
+        print(f"You now have {total_cranes} stars.\n")
+        Q3stars = FoodStarQ3()
+        total_stars = total_stars + Q3stars
+        print(f"Your current total is {total_stars} stars.\n")
+        Q4stars = FoodStarQ4()
+        total_stars = total_stars + Q4stars
+        print(f"Almost there. One more question.\n") 
+        Q5stars = FoodStarQ5()
+        total_stars = total_stars + Q5stars
+        print(f"You now have {total_stars} stars.\n")
+        break
+        
+    #prints according to total_star variable
+    if total_stars == 1000:
+        print(f"Congrats {name.upper()}! You just finished collecting 1000 stars!")
+    else:
+        print(f"You have {total_stars} stars.")
+        lose('You almost made it.')
 
+#prints out quiz for user and returns Q1star variable
+def FoodStarQ1():
+    print('The first nation that influenced Japanese cuisine was China, with the intoduction')
+    print('of rice around 300 B.C, thus also introducting choptsicks and tofu.')
+    
+    answer = input("True or False?  > ")
+    
+    if 't' in answer or 'T' in answer:
+        print('Yes! That is correct. ')
+    
+#prints out quiz for user and returns Q2star variable
+def FoodStarQ2():
+    print('What religion influence Japan cuisine to become vegetarian?\n')
+    guess = input()
+    
+    if 'Buddhism' in guess:
+        print('')
+    
+#prints out quiz for user and returns Q3star variable    
+def FoodStarQ3():
+    print('Sake originated during the Nara period (710-794 CE) and can be drunk')
+    print('hot or cold. It only needs four ingredients. What are the four ingredients?\n')
+    
+    print('1) Rice, water, yeast and sugar')
+    print('2) Rice, water, yeast and mold')
+    print('3) Rice, water, salt and sugar')
+    print('4) Rice, vinegar, salt and sugar')
+
+    answer = input("Your answer: ")
+    
+    if answer = '2':
+        print('Nice! ')
+        
+
+#prints out quiz for user and returns Q4star variable
+def FoodStarQ4():    
+    
+#prints out quiz for user and returns Q5star variable    
+def FoodStarQ5():    
+    
+    
+    
+    
+    
+    
+    
+    
 
