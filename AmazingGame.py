@@ -528,7 +528,7 @@ def japan_food():
     j-foodquestions()
     
 #calls each question in while loop and adds return value to total_stars variable
-def j-foodquestions():
+def j_foodquestions():
     total_stars = 0
     print('You are starting with "0" total food stars.\n')
     
@@ -562,7 +562,7 @@ def FoodStarQ1():
     print('The first nation that influenced Japanese cuisine was China, with the intoduction')
     print('of rice around 300 B.C, thus also introducting choptsicks and tofu.')
     
-    answer = input("True or False?  > ")
+    answer = input("True or False? > ")
     
     if 't' in answer or 'T' in answer:
         print('Yes! That is correct. ')
@@ -570,10 +570,23 @@ def FoodStarQ1():
 #prints out quiz for user and returns Q2star variable
 def FoodStarQ2():
     print('What religion influence Japan cuisine to become vegetarian?\n')
-    guess = input()
+    guess = input('Your guess: ').capitalize()
     
     if 'Buddhism' in guess:
-        print('')
+        print("That's correct! Buddhism is one of the two major religions in Japan today")
+        print('and was an important influence on Japanese cuisine. With the rise of')
+        print('Buddhism in 700 A.D, the religion led a ban on eating meat, thus creating one of the')
+        print('popular dishes today, sushi.\n')
+    elif 'B' in guess:
+        print('It looks like your spelling is a bit off. Try again.')
+        FoodStarQ2()
+    else:
+        print('Actually, Buddhism was and still is a major influence in Japan today.')
+        print('With the rise of Buddhism in 700 A.D, the religion led a ban on eating meat,')
+        print('thus creating one of the popular dishes today, sushi.\n')
+        print('Try harder next time.')
+        Q2stars = 0
+        return Q2stars
     
 #prints out quiz for user and returns Q3star variable    
 def FoodStarQ3():
@@ -587,21 +600,24 @@ def FoodStarQ3():
 
     answer = input("Your answer: ")
     
-    if answer = '2':
+    if answer == '2':
         print('Nice! ')
-        
+    else:
+        Q3stars = 0
+        print('You have a lot to learn.') 
+        return Q3stars   
 
 #prints out quiz for user and returns Q4star variable
-def FoodStarQ4():    
+#def FoodStarQ4():    
     
 #prints out quiz for user and returns Q5star variable    
-def FoodStarQ5():    
+#def FoodStarQ5():    
     
     
     
     
     
-    
-    
+#j_foodquestions()
+FoodStarQ2()    
     
 
