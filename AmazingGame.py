@@ -532,13 +532,13 @@ def j_foodquestions():
     total_stars = 0
     print('You are starting with "0" total food stars.\n')
     
-    while total_cranes < 1000:
+    while total_stars < 1000:
         Q1stars = FoodStarQ1()
         total_stars = total_stars + Q1stars
         print(f"You currently have {total_stars} stars.\n")
         Q2stars = FoodStarQ2()
         total_stars = total_stars + Q2stars
-        print(f"You now have {total_cranes} stars.\n")
+        print(f"You now have {total_stars} stars.\n")
         Q3stars = FoodStarQ3()
         total_stars = total_stars + Q3stars
         print(f"Your current total is {total_stars} stars.\n")
@@ -560,12 +560,19 @@ def j_foodquestions():
 #prints out quiz for user and returns Q1star variable
 def FoodStarQ1():
     print('The first nation that influenced Japanese cuisine was China, with the intoduction')
-    print('of rice around 300 B.C, thus also introducting choptsicks and tofu.')
+    print('of rice around 300 B.C, thus also introducting choptsicks and tofu.\n')
     
     answer = input("True or False? > ")
     
     if 't' in answer or 'T' in answer:
-        print('Yes! That is correct. ')
+        print('\nYes! That is correct! Like India and many countries around the world,')
+        print('you can find the influence of Chinese cuisine. Just do a little research!')
+    else:
+        print("\nWhy don't you try again.")
+        FoodStarQ1()
+    #returns stars
+    Q1stars = 200
+    return Q1stars
     
 #prints out quiz for user and returns Q2star variable
 def FoodStarQ2():
@@ -573,20 +580,24 @@ def FoodStarQ2():
     guess = input('Your guess: ').capitalize()
     
     if 'Buddhism' in guess:
-        print("That's correct! Buddhism is one of the two major religions in Japan today")
+        print("\nThat's correct! Buddhism is one of the two major religions in Japan today")
         print('and was an important influence on Japanese cuisine. With the rise of')
         print('Buddhism in 700 A.D, the religion led a ban on eating meat, thus creating one of the')
         print('popular dishes today, sushi.\n')
-    elif 'B' in guess:
-        print('It looks like your spelling is a bit off. Try again.')
+    elif 'b' in guess:
+        print('\nIt looks like your spelling is a bit off. Try again.')
         FoodStarQ2()
     else:
-        print('Actually, Buddhism was and still is a major influence in Japan today.')
+        print('\nActually, Buddhism was and still is a major influence in Japan today.')
         print('With the rise of Buddhism in 700 A.D, the religion led a ban on eating meat,')
         print('thus creating one of the popular dishes today, sushi.\n')
         print('Try harder next time.')
         Q2stars = 0
         return Q2stars
+    #returns star if loop is conpleted
+    Q2stars = 200
+    return Q2stars
+    
     
 #prints out quiz for user and returns Q3star variable    
 def FoodStarQ3():
@@ -617,7 +628,7 @@ def FoodStarQ3():
     
     
     
-#j_foodquestions()
-FoodStarQ2()    
+j_foodquestions()
+   
     
 
