@@ -576,53 +576,103 @@ def FoodStarQ1():
     
 #prints out quiz for user and returns Q2star variable
 def FoodStarQ2():
+    print('Now that you have a little information on how China influenced Japanese cuisine,')
+    print('can you guess what other influential foods China brought to Japan?\n')
+    
+    print('1) Mochi and Miso')
+    print('2) Omurice and Natto')
+    print('3) Green Tea and Ramen')
+    print('4) Tamagoyaki and Takoyaki\n')
+    
+    answer = input('Your answer: ')
+    
+    if answer == '3':
+        print('\nYes! Japanese green tea actually originated from China, rumored to be discovered when')
+        print('tea leaves fell into the cup of Emperor Shennong. Green tea has spread to other')
+        print('countries in Southeast Asia and is enjoyed globally. Ramen, on the other hand,')
+        print('came with the Chinese students to Japan in the 17th century when Japanese restaurants')
+        print('infused Chinese noodles with Japanese cuisine.\n')
+    elif answer == '1':
+        print('\nAlthough mochi is made from gluttonous rice that has origins in China, the origins of')
+        print('miso is unclear. Influenced by Buddhist monks, miso can be traced back to the')
+        print('Kamakura period (1192-1333).')
+        print('Try again.\n')
+        FoodStarQ2()
+    elif answer == '2':
+        print('\nAlthough natto does have origins in China, as it was China that first imported rice and')
+        print('beans to Japan, omurice was invented in a western-style restaurant in Tokyo. Not only that,')
+        print('but China does have their own version of natto--chi, a salted, fermented and aged soybean')
+        print('seasoning. Try again.\n')
+        FoodStarQ2()
+    elif answer == '4':
+        print('\nTamagoyaki is a Japanese omelette rolled together from several layers of a fried egg.')
+        print('Takoyaki has origins in Osaka, inveted by a street vendor named Tomekichi Endo.')
+        print('Try again.\n')
+        FoodStarQ2()
+    else:
+        print("It looks like you're getting worn out from the game. Hey, don't give up.")
+        Q2stars = 0
+        return Q2stars
+    #returns Q2stars if user completes loop without calling else
+    Q2stars = 200
+    return Q2stars
+    
+#prints out quiz for user and returns Q3star variable
+def FoodStarQ3():
     print('What religion influence Japan cuisine to become vegetarian?\n')
     guess = input('Your guess: ').capitalize()
     
     if 'Buddhism' in guess:
         print("\nThat's correct! Buddhism is one of the two major religions in Japan today")
         print('and was an important influence on Japanese cuisine. With the rise of')
-        print('Buddhism in 700 A.D, the religion led a ban on eating meat, thus creating one of the')
-        print('popular dishes today, sushi.\n')
+        print('Buddhism in 700 A.D, the religion led a ban on eating meat with fish as the replacement,')
+        print('thus creating one of the popular dishes today, sushi.\n')
     elif 'b' in guess:
         print('\nIt looks like your spelling is a bit off. Try again.')
-        FoodStarQ2()
+        FoodStarQ3()
     else:
         print('\nActually, Buddhism was and still is a major influence in Japan today.')
-        print('With the rise of Buddhism in 700 A.D, the religion led a ban on eating meat,')
-        print('thus creating one of the popular dishes today, sushi.\n')
+        print('With the rise of Buddhism in 700 A.D, the religion led a ban on eating meat with,')
+        print('fish as the replacment, thus creating one of the popular dishes today, sushi.\n')
         print('Try harder next time.')
-        Q2stars = 0
-        return Q2stars
+        Q3stars = 0
+        return Q3stars
     #returns star if loop is conpleted
-    Q2stars = 200
-    return Q2stars
+    Q3stars = 200
+    return Q3stars
     
     
-#prints out quiz for user and returns Q3star variable    
-def FoodStarQ3():
-    print('Sake originated during the Nara period (710-794 CE) and can be drunk')
-    print('hot or cold. It only needs four ingredients. What are the four ingredients?\n')
+#prints out quiz for user and returns Q4star variable    
+def FoodStarQ4():
+    print('Sake originated during the Nara period (710-794 CE) and can be drunk hot or cold.')
+    print('It only needs four ingredients. What are the four ingredients?\n')
     
     print('1) Rice, water, yeast and sugar')
     print('2) Rice, water, yeast and mold')
     print('3) Rice, water, salt and sugar')
-    print('4) Rice, vinegar, salt and sugar')
+    print('4) Rice, vinegar, salt and sugar\n')
 
     answer = input("Your answer: ")
     
     if answer == '2':
-        print('Nice! ')
+        print('\nNice! 80% of sake is water and depending on the mineral content, it can change')
+        print('the fermentation process. Yeast, like beer and wine, is used for the fermentation')
+        print('process. Yeast eats the sugar and gives off the carbon dioxide, alochol and acids.')
+        print('It also has a big impact on the smell of sake. In making sake, sake producers use specific')
+        print('sake rice, not the regular rice that everyone eats. Sake rice grains have more strach')
+        print('condentrated in the middle of the grain and fats and proteins on the outter layers.')
+        print('Last but not least, MOLD, specifically Koji mold. Koji mold grows on top of the rice')
+        print('for two days before being added to the fermantation process. This mold breaks down starch')
+        print('molecules and converts it into fermentable sugar. 乾杯!! KANPAI!!\n')
     else:
-        Q3stars = 0
-        print('You have a lot to learn.') 
-        return Q3stars   
-
-#prints out quiz for user and returns Q4star variable
-#def FoodStarQ4():    
+        print('You have a lot to learn. Try again.\n')
+        FoodStarQ4()
+    #returns stars
+    Q4stars = 200
+    return Q4stars  
     
 #prints out quiz for user and returns Q5star variable    
-#def FoodStarQ5():    
+def FoodStarQ5():
     
     
     
