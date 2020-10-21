@@ -21,7 +21,7 @@ name = input('Preparing your boarding ticket, name please? ').capitalize()
 sleep(1.5)
 
 #user starts in the U.S and must answer quiz correctly to go to the next desintation
-def welcome_us():
+def welcome():
     print(f'\nWelcome {name}, to your very first Amazing Race!')
     print('On this race around the world, you will be tested of your worldly knowledge.')
     print("And who knows, maybe you'll win the grand prize?\n")
@@ -291,7 +291,7 @@ def india_food():
 
 #prints Japan welcome speech and prompt location for next mini quiz    
 def welcome_japan():
-    print('Welcome to Japan!\n')
+    print('WELCOME TO JAPAN!!!\n')
     print('This country will determine the ultimate winner and bring an end to the Amazing Race.')
     print('A small country made up of clustering islands with colonizing history and power,')
     print("Japan's relationship with other countries have been a complex one.")
@@ -516,7 +516,7 @@ def CQ5():
 
 #japanses food intro and prompts final questionaires
 def japan_food():
-    print("Made up of 3,000 islands, 2/3 of Japan's land is too mounatinous develop, thus devoting")
+    print("\nMade up of 3,000 islands, 2/3 of Japan's land is too mounatinous develop, thus devoting")
     print('half of its farmable land to growing rice and making up 8% of all fish caught in the world.\n')
     
     print('Japanese cuisine was awarded the statuse of intangible cultural heritage')
@@ -525,7 +525,7 @@ def japan_food():
     print('customs of other nations. Answer each dish question to gain 1000 food stars to win the race.\n')
     
     #calls j-foodquestions() function
-    j-foodquestions()
+    j_foodquestions()
     
 #calls each question in while loop and adds return value to total_stars variable
 def j_foodquestions():
@@ -627,7 +627,7 @@ def FoodStarQ3():
         print('and was an important influence on Japanese cuisine. With the rise of')
         print('Buddhism in 700 A.D, the religion led a ban on eating meat with fish as the replacement,')
         print('thus creating one of the popular dishes today, sushi.\n')
-    elif 'b' in guess:
+    elif 'b' in guess or 'B' in guess:
         print('\nIt looks like your spelling is a bit off. Try again.')
         FoodStarQ3()
     else:
@@ -673,12 +673,31 @@ def FoodStarQ4():
     
 #prints out quiz for user and returns Q5star variable    
 def FoodStarQ5():
+    print('In 1970, this American fast food chain started to sell Christmas party barrels')
+    print('inspired by the American holiday, Thanksgiving. This fast food chain built')
+    print('secular and commercial traditions and marketed Christmas as a time to eat this food.')
+    print('Which fast food chain is this? \n')
     
+    fastfoodchain = input("Your answer: ").capitalize()
     
+    if 'K' in fastfoodchain:
+        print("\nHave to been to Japan? Because you are well aware of KFC's marketing tactic")
+        print('to make Christmas all about fried chicken! An estimated 3.6 million Japanese')
+        print('families eat KFC during the Christmas season.\n')
+    elif "McDonalds" in fastfoodchain or 'm' in fastfoodchain or 'M' in fastfoodchain:
+        print('\nHmmm... although the BigMac is used as a tool to measure currency exchange,')
+        print('McDonalds is NOT the fast food chain that marketed itself as a Christmas experience.\n')
+        FoodStarQ5()
+    else:
+        print("The fast food you listed isn't as popular as Kentuck Fried Chicken. An estimated 3.6 million")
+        print('Japanese families eat KFC during the Christmas season. Sorry, no stars for you.\n')
+        Q5stars = 0
+        return Q5stars
+    #returns stars if else is not called
+    Q5stars = 200
+    return Q5stars
     
-    
-    
-j_foodquestions()
+welcome()
    
     
 
