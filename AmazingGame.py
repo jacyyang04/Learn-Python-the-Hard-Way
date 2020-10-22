@@ -16,9 +16,18 @@ def lose(reason):
 #    function
 #    sleep(2)
 
+
+#while loop that prints each character out
+#def print_sentence(text):
+#    i = 0
+#    while i < len(text):
+#        print(text[i])
+#        i = i + 1
+
 #prompts user name before starting the game
 name = input('Preparing your boarding ticket, name please? ').capitalize()
 sleep(1.5)
+
 
 #user starts in the U.S and must answer quiz correctly to go to the next desintation
 def welcome():
@@ -30,13 +39,9 @@ def welcome():
     
     #prompts quiz
     print('Who is considered as the very first programmer?\n')
-    #sleep(2)
     print('1) Linus Torvalds')
-    #sleep(1)
     print('2) Ada Lovelace')
-    #sleep(1)
     print('3) Grace Hopper\n')
-    #sleep(1)
     
     #stores user input
     guess = input('Your guess: ')
@@ -48,11 +53,9 @@ def welcome():
         print(f"\nCongratulations {name}!\n")
         print('Ada Lovelace is known as the first computer programmer with her')
         print('work in Analytical Engine, publishing the first algorithm to be carried out by a machine.\n')
-        #sleep(1)
         
         print('Your boarding pass has completed. Take this trip to the city of London, England')
         print('where Ada Lovelace was born.\n')
-        #sleep(3)
         welcome_england()
     #if user incorrectly answers, will prompt the lose function and exit the game    
     else:
@@ -61,22 +64,18 @@ def welcome():
 #prompts the welcome speech for England and asks user what route they would like to take
 def welcome_england():
     print('WELCOME TO ENGLAND!\n')
-    #sleep(2)
     print('The country known for English Breakfasts and historical monuments.')
     print('As you head down to the Thames River, there are two routes you can take.')
     print('There is one sign that points to Buckingham Palace and another that points to SoHo.')
-    #sleep(1)
+    sleep(1)
     print('Have you decided where you would like to go?\n')
     
     #two routes that the user has to pick from
     print('1) Take the route towards Buckingham Palace.')
-    #sleep(1)
     print('2) Forget the mansions. Take me to Soho!\n')
-    #sleep(1)
     
     #stores user input
     user_decision = input("What are you going to do? >> ")
-    #sleep(1)
     
     #will prompt a royalty quiz or food quiz depending on user_decision
     #user will fail the game if they do not select either routes provided
@@ -93,7 +92,6 @@ def welcome_england():
 #prints out statements about Queen Victoria and prompts quiz
 def royalty_quiz():
     print('Welcome to the British Empire.')
-    #sleep(2)
     print('I ruled as the Queen of the United Kingdom and Ireland from 1819-1901,')
     print('leading one of the greatest expansions of the British Empire,')
     print('enforcing the ways of British colonization.')
@@ -101,15 +99,10 @@ def royalty_quiz():
     
     #pompts quiz
     print('Who am I?\n')
-    #sleep(2)
     print('1) King William IV')
-    #sleep(1)
     print('2) Queen Victoria')
-    #sleep(1)
     print('3) Queen Anne')
-    #sleep(1)
     print('4) Queen Elizabeth\n')
-    #sleep(1)
     
     #stores user guess
     guess = input("Your guess: ")
