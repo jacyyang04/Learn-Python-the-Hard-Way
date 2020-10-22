@@ -29,8 +29,8 @@ print(stuff[-1])
 #removes item
 print(stuff.pop())
 
-#adds space to the end of stuff
+#joins stuff with ' ' between them
 print(' '.join(stuff))
 
-#calls item 4 and 5 and joins with #
+#joins # between items 4 and 5 in list stuff
 print('#'.join(stuff[3:5]))
