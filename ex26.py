@@ -61,3 +61,8 @@ if not state:
 #get a city with a default value
 city = cities.get('MI', 'not listed')
 print('The city for MI is: %s' %city)
+
+
+
+
+
