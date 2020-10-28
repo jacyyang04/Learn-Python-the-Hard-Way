@@ -1,7 +1,8 @@
 #Commenting classes
 
 import random
-from urllib import urlopen
+#urllib in python3 has been split into urllib.request and urllib.error
+from urllib.request import urlopen
 import sys
 
 WORD_URL = "http://learncodethehardway.org/words.txt"
@@ -25,4 +26,8 @@ PHRASE_FIRST = False
 if len(sys.argv) == 2 and sys.argv[1] == "english":
     PHRASE_FIRST = True
     
-
+# load up words from website
+for word in urlopen(WORD_URL).readlines():
+    WORDS.append(word.strip())
+    
+    
