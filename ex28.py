@@ -59,6 +59,25 @@ def convert(snippet, phrase):
         results.append(result)
         
     return results
+    
+#keep going until they hit CRTL-D
+try:
+    while True:
+        snippets = PHRASES.keys()
+        random.shuffle(snippets)
+            
+        for snippet in snippets:
+            phrases = PHRASES[snippet]
+            question, answer = convert(snippet, phrase)
+            if PHRASE_FIRST:
+                question, answer = answer, question
+                    
+            print(question)
+            
+            input("> ")
+            print("ANSWER: %s\n\n" %answer)         
+except EOFError:
+    print("\nBye")
         
         
         
