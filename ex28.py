@@ -1,4 +1,4 @@
-#Commenting classes
+#create game-like experience to understand terminology of class and objects
 
 import random
 #urllib in python3 has been split into urllib.request and urllib.error
