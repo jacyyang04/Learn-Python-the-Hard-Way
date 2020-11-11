@@ -40,8 +40,51 @@ class Employee(Person):
 class Fish(object):
     pass
     
-#make Salmon that is-a Fish
+#make Salmon class that is-a Fish
 class Salmon(Fish):
     pass
     
+#make Halibut class that is-a fish
+class Halibut(Fish)
+    pass
+    
+#rover is-a Dog
+rover = Dog("Rover")
+
+#satan is-a Cat
+satan = Cat("Satan")
+
+#mary is-a Person
+mary = Person("Mary")
+
+#from mary set pet attribute to satan
+mary.pet = satan
+
+#frank is-a Employee with Frank and 120000 params
+frank = Employee("Frank", 120000)
+
+#from frank set pet attribute to rover
+frank.pet = rover
+
+#set flipper as an instance of Fish
+flipper = Fish()
+
+#set crouse as an instance of Salmon
+crouse = Salmon()
+
+#set harry as an instance of Halibut
+harry = Halibut()
+
+
+
+
+
+
+
+
+
+
+
+
+
 
