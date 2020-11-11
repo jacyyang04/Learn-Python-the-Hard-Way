@@ -24,17 +24,17 @@ class Person(object):
     def __init__(self, name):
         #from self get name attribute and set to name
         self.name = name
-        #Person has-a pet of some kind
+        #set pet attribute to none as default
         self.pet = None
     
 #make class named Employee that is-a Person
 class Employee(Person):
     #class Employee has-a __init__ that takes self, name and salary params
     def __init__(self, name, salary):
-    #call super function with Employee and self params, call __init__(name) function
-    super(Employee, self).__init__(name)
-    #from self, set salary attribute to salary
-    self.salary = salary
+        #call super function with Employee and self params, call __init__(name) function
+        super(Employee, self).__init__(name)
+        #from self, set salary attribute to salary
+        self.salary = salary
     
 #make Fish class that is-a object
 class Fish(object):
@@ -45,7 +45,7 @@ class Salmon(Fish):
     pass
     
 #make Halibut class that is-a fish
-class Halibut(Fish)
+class Halibut(Fish):
     pass
     
 #rover is-a Dog
