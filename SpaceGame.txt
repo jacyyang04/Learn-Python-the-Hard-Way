@@ -1,0 +1,18 @@
+Concepts for Space Game
+
+Description:
+
+"Aliens have invaded a space ship and our heroes have to go through a maze of
+rooms defeating them so that we can escape into an escape pod to the planet
+below. This is an adventure type game with text outputs and funny ways to die.
+The game will involve an engine that runs a map full or rooms or scenes. Each
+room has its own description when the player enters it and then tells the engine
+which room to run to next out of the map."
+
+Map
+Engine
+Scene
+-Death
+-Central Corridor
+
+
