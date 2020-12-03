@@ -9,10 +9,20 @@ The game will involve an engine that runs a map full or rooms or scenes. Each
 room has its own description when the player enters it and then tells the engine
 which room to run to next out of the map."
 
-Map
-Engine
-Scene
--Death
--Central Corridor
+Map:
+ - next_scene
+ - opening_scene
+Engine:
+ - play
+Scene:
+--> enter
+ - Death
+ - Central Corridor
+ - Weapons
+ - Naviagtion
+ - Bridge
+ - Escape Mod
+ - Medic
 
-
+Actions:
+ - run
