@@ -39,7 +39,7 @@ class Bridge(Scene):
     def enter(self):
         pass
 
-class EscapePod(Scene)
+class EscapePod(Scene):
     def enter(self):
         pass
         
@@ -56,6 +56,3 @@ class Engine(object):
     def play(self):
         pass
         
-        
-
-    
