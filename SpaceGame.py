@@ -1,7 +1,7 @@
 #Gothons from Planet Percel #25
 
 #class for Maps
-Class Map(object):
+class Map(object):
 
     def __init__(self, starting_scene):
         pass
@@ -12,16 +12,50 @@ Class Map(object):
     def opening_scene(self):
         pass
         
-Class Engine(object):
-    def __init__(self, scene_map):
+#class for Scenes
+class Scene(object):
+
+    def enter(self):
         pass
         
-Scene:
---> enter
- - Death
- - Central Corridor
- - Weapons
- - Naviagtion
- - Bridge
- - Escape Mod
- - Medic
+class Death(Scene):
+
+    def enter(self):
+        pass
+    
+class CentralCorridor(Scene):
+    def enter(self):
+        pass
+
+class Weapons(Scene):
+    def enter(self):
+        pass
+        
+class Navigation(Scene):
+    def enter(self):
+        pass
+
+class Bridge(Scene):
+    def enter(self):
+        pass
+
+class EscapePod(Scene)
+    def enter(self):
+        pass
+        
+class Medic(Scene):
+    def enter(self):
+        pass
+
+#class for Engine
+class Engine(object):
+    
+    def __init__(self, scene_map):
+        pass
+    
+    def play(self):
+        pass
+        
+        
+
+    
