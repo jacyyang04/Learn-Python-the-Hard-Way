@@ -55,4 +55,8 @@ class Engine(object):
     
     def play(self):
         pass
-        
+
+
+a_map = Map('central_cooridor')
+a_game = Engine(a_map)
+a_game.play()
