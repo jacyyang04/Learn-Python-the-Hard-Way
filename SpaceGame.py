@@ -2,13 +2,13 @@
 
 #class for Maps
 class Map(object):
-
+    #class Maps has a init function that takes self and starting_scene params
     def __init__(self, starting_scene):
         pass
-    
+    #class Maps has a next_scene function that takes self and scene_name params
     def next_scene(self, scene_name):
         pass
-    
+    #class Maps has an opening_scene function that takes self
     def opening_scene(self):
         pass
         
@@ -58,5 +58,8 @@ class Engine(object):
 
 
 a_map = Map('central_cooridor')
+
 a_game = Engine(a_map)
+
 a_game.play()
+
