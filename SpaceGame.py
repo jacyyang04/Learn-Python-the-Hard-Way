@@ -30,8 +30,9 @@ class CentralCorridor(Scene):
     def enter(self):
         pass
 
-#
+#make Weapons class an object of Scene class
 class Weapons(Scene):
+    #class Weapons has enter function that takes self params
     def enter(self):
         pass
 
