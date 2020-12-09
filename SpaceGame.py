@@ -36,8 +36,9 @@ class Weapons(Scene):
     def enter(self):
         pass
 
-#        
+#make Navigations class an object of Scene class     
 class Navigation(Scene):
+    #class Navigation has an enter function that takes self params
     def enter(self):
         pass
 
