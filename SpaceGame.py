@@ -2,7 +2,7 @@
 
 #class for Maps
 class Map(object):
-    #class Maps has a init function that takes self and starting_scene params
+    #class Maps has an init function that takes self and starting_scene params
     def __init__(self, starting_scene):
         pass
     #class Maps has a next_scene function that takes self and scene_name params
@@ -14,12 +14,13 @@ class Map(object):
         
 #class for Scenes
 class Scene(object):
-
+    #class Scene has enter function that takes self
     def enter(self):
         pass
-        
-class Death(Scene):
 
+#make a Death class that is a Scene class        
+class Death(Scene):
+    #
     def enter(self):
         pass
     
@@ -46,6 +47,7 @@ class EscapePod(Scene):
 class Medic(Scene):
     def enter(self):
         pass
+
 
 #class for Engine
 class Engine(object):
