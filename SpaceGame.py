@@ -1,6 +1,6 @@
 #Gothons from Planet Percel #25
 
-#class for Maps
+#create class Map
 class Map(object):
     #class Maps has an init function that takes self and starting_scene params
     def __init__(self, starting_scene):
@@ -8,30 +8,34 @@ class Map(object):
     #class Maps has a next_scene function that takes self and scene_name params
     def next_scene(self, scene_name):
         pass
-    #class Maps has an opening_scene function that takes self
+    #class Maps has an opening_scene function that takes self params
     def opening_scene(self):
         pass
         
-#class for Scenes
+#create class Scene
 class Scene(object):
-    #class Scene has enter function that takes self
+    #class Scene has enter function that takes self params
     def enter(self):
         pass
 
-#make a Death class that is a Scene class        
+#make a Death class that is an object of Scene class        
 class Death(Scene):
-    #
+    #class Death has an enter function that takes self params
     def enter(self):
         pass
     
+#make a CentralCorridor class that is an object of Scene classs
 class CentralCorridor(Scene):
+    #class CentralCorridor has an enter function that takes self params
     def enter(self):
         pass
 
+#
 class Weapons(Scene):
     def enter(self):
         pass
-        
+
+#        
 class Navigation(Scene):
     def enter(self):
         pass
