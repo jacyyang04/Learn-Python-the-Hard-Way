@@ -42,15 +42,19 @@ class Navigation(Scene):
     def enter(self):
         pass
 
+#make Bridge class an object of Scene
 class Bridge(Scene):
+    #class Bridge has an enter function that takes self params
     def enter(self):
         pass
 
 class EscapePod(Scene):
+    
     def enter(self):
         pass
         
 class Medic(Scene):
+    
     def enter(self):
         pass
 
