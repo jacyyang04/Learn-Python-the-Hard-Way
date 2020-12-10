@@ -54,19 +54,21 @@ class EscapePod(Scene):
     def enter(self):
         pass
 
-
+#make Medic class an object of Scene
 class Medic(Scene):
-    
+    #class Medic has an enter function that takes self params
     def enter(self):
         pass
 
 
-#class for Engine
+#create class Engine 
 class Engine(object):
     
+    #Engine class has an __init__ function that takes self and scene_map params
     def __init__(self, scene_map):
         pass
     
+    #Engine class has play funtion that takes self params
     def play(self):
         pass
 
