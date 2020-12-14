@@ -1,13 +1,23 @@
 #Gothons from Planet Percel #25
 
+
+import sys import exut
+from random import randit
+
 #create class Map
 class Map(object):
     #class Maps has an init function that takes self and starting_scene params
     def __init__(self, starting_scene):
-        pass
+        
+        opening = "My friend, I have found you!!\nWe must hurry! Aliens have invaded"
+        for i in opening:
+            print(opening[i])
+            i += 1
+        
     #class Maps has a next_scene function that takes self and scene_name params
     def next_scene(self, scene_name):
         pass
+        
     #class Maps has an opening_scene function that takes self params
     def opening_scene(self):
         pass
