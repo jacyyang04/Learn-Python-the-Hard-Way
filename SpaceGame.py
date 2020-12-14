@@ -1,8 +1,8 @@
 #Gothons from Planet Percel #25
 
 
-import sys import exut
-from random import randit
+from sys import exit
+from random import randint
 
 #create class Map
 class Map(object):
@@ -10,7 +10,7 @@ class Map(object):
     def __init__(self, starting_scene):
         
         opening = "My friend, I have found you!!\nWe must hurry! Aliens have invaded"
-        for i in opening:
+        for i in opening():
             print(opening[i])
             i += 1
         
